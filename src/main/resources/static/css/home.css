@@ -1,0 +1,437 @@
+
+.container {
+    padding-top: 60px;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.parte-esq { /* ---------- ALTERADO EM 08/09/2023 (Gabriel) ---------- */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 10px;
+}
+
+.parte-esq p {
+    color: #A5A5A5;
+    font-size: 1.5rem;
+    margin: 15px 0 40px 0;
+}
+
+[data-theme="light"] .parte-esq p  {
+    color: #494949;
+}
+
+.caixa-setas {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container2 {
+    height: 450px;
+    width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.container2::-webkit-scrollbar {
+    display: none;
+}
+
+.seta-direita, .seta-esquerda {
+    max-width: 100%;
+    height: 60px;
+    cursor: pointer;
+}
+
+/* .setas {
+    max-width: 100%;
+    height: 70px;
+    transition: 150ms; ---------- ALTERADO EM 08/09/2023 (Gabriel) ----------
+}
+
+.seta {
+    max-width: 100%;
+    height: 50px;
+    transition: 150ms; ---------- ALTERADO EM 08/09/2023 (Gabriel) ----------
+} */
+
+.caixa-jogos {
+    background-color: #D9D9D9;
+    margin: 15px 10px;
+    width: 330px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    padding-bottom: 10px; /* ---------- ALTERADO EM 08/09/2023 (Gabriel) ---------- */
+    transition: 150ms; /* ---------- ALTERADO EM 08/09/2023 (Gabriel) ---------- */
+}
+
+[data-theme="light"] .caixa-jogos {
+    background-color: #333;
+    color: #D9D9D9;
+}
+
+.caixa-jogos:hover {
+    transform: scale(1.1); /* ---------- ALTERADO EM 08/09/2023 (Gabriel) ---------- */
+}
+
+.tibia-esquerda {
+    margin-left: 20px;
+}
+
+.logo-jogos {
+    max-width: 100%;
+    height: 110px;
+}
+
+.caixa-jogos h3 {
+    text-align: center;
+    color: #B11313;
+    font-size: 1.75rem;
+}
+
+.caixa-jogos p {
+    color: #202020;
+    margin: 0 35px;
+    text-align: center;
+}
+
+[data-theme="light"] .caixa-jogos p{
+        color: #D9D9D9;
+}
+
+.botao-laranja {
+    background-color: #FF2400;
+    display: inline;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 15px 55px;
+    border-radius: 40px;
+    transition: 150ms; /* ---------- ALTERADO EM 08/09/2023 (Gabriel) ---------- */
+}
+
+.botao-laranja:hover {
+    background-color: #B81A00;
+}
+
+.retangulos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+    margin: 34px 0 75px 0;
+}
+
+.retang-p {
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+}
+
+
+.vantagens {
+    background-color: #111111;
+    text-align: center;
+    padding: 70px 0;
+}
+
+[data-theme="light"] .vantagens {
+    background-color: #aaaaaa;
+}
+
+.vantagens h2 {
+    color: #FF2400;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.vantagens .titulo-h2-h3 h3 {
+    color: #ffffff;
+    font-size: 2.25rem;
+    margin: 25px 0px 60px 0px;
+}
+
+.container-van {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1220px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.van-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.caixa-vantagem {
+    background-color: #2F2F2F;
+    border-radius: 20px;
+    height: 280px;
+    width: 365px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.caixa-vantagem img {
+    max-width: 100%;
+    height: 70px;
+}
+
+.caixa-vantagem h3 {
+    font-size: 1.375rem;
+}
+
+.caixa-vantagem p {
+    color: #A5A5A5;
+    font-size: 1.25rem;
+    margin: 0 30px;
+}
+
+.caixa-vantagem-c {
+    background-color: #2F2F2F;
+    border-radius: 20px;
+    height: 600px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.caixa-vantagem-c img {
+    max-width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.caixa-vantagem-c h3 {
+    font-size: 1.75rem;
+}
+
+.caixa-vantagem-c p {
+    font-size: 1.5rem;
+    margin: 0 40px;
+}
+
+/* RESPONSIVO */
+
+
+@media screen and (max-width: 1300px) {
+
+    .container {
+        max-width: 850px;
+    }
+
+    .parte-esq h1, .caixa-opiniao h2 {
+        font-size: 2.625rem;
+    }
+
+    .parte-esq p, .caixa-opiniao p {
+        font-size: 1.375rem;
+    }
+
+    .container div img {
+        width: max-content;
+        height: 390px;
+    }
+
+    .caixa-setas {
+        max-width: 1000px;
+    }
+
+    .container2 {
+        max-width: 850px;
+    }
+
+    .container-van {
+        max-width: 1000px;
+    }
+
+    .caixa-vantagem {
+        width: 280px;
+    }
+
+    .caixa-vantagem-c {
+        width: 340px;
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+
+    .container {
+        max-width: 650px;
+        height: 420px;
+    }
+
+    .parte-esq h1, .caixa-opiniao h2 {
+        font-size: 2.25rem;
+    }
+
+    .container div img {
+        width: max-content;
+        height: 340px;
+    }
+
+    .caixa-setas {
+        max-width: 650px;
+    }
+
+    .container2 {
+        max-width: 550px;
+    }
+
+    .aparece {
+        display: inline;
+    }
+
+    .desaparece {
+        display: none;
+    }
+
+    .vantagens .titulos-vantagens {
+        margin: 0 auto;
+        width: 650px;
+    }
+
+    .container-van {
+        max-width: 650px;
+    }
+
+    .container-van .caixa-vantagem-c, .container-van .profissionalismo {
+        width: 320px;
+    }
+
+    .van-baixo {
+        width: 650px;
+        margin-top: 40px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .caixa-vantagem {
+        width: 280px;
+    }
+
+    .caixa-vantagem-c {
+        width: 340px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .container {
+        max-width: 450px;
+        height: auto;
+    }
+
+    .imagem-mewtwo {
+        display: none;
+    }
+
+    .caixa-setas {
+        padding-top: 60px;
+        max-width: 400px;
+        justify-content: center;
+    }
+
+    .container2 {
+        max-width: max-content;
+    }
+
+    .caixa-jogos {
+        margin: auto 10px;
+    }
+
+    .caixa-jogos:hover {
+        transform: none;
+    }
+
+    .seta-esquerda, .seta-direita {
+        display: none;
+    }
+
+    .caixa-jogos .tibia-esquerda {
+        margin-left: 0px;
+    }
+
+    .vantagens .titulos-vantagens h3 {
+        font-size: 2rem;
+    }
+
+    .vantagens .titulos-vantagens {
+        width: 450px;
+    }
+
+    .vantagens .container-van {
+        max-width: 450px;
+        justify-content: center;
+    }
+
+    .van-flex {
+        justify-content: center;
+    }
+
+    .container-van .caixa-vantagem {
+        width: 320px;
+    }
+
+    .caixa-vantagem-c {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .container {
+        max-width: 300px;
+    }
+
+    .caixa-setas {
+        width: 300px;
+    }
+
+    .caixa-jogos {
+        width: 250px;
+    }
+
+    .caixa-jogos p{
+        font-size: 1.375rem;
+    }
+
+    .vantagens .titulos-vantagens {
+        width: 300px;
+    }
+
+    .vantagens .titulos-vantagens h3 {
+        font-size: 1.75rem;
+    }
+
+    .container-van .caixa-vantagem,.container-van  .caixa-vantagem-c {
+        width: 300px;
+    }
+
+    .container-van .caixa-vantagem p, .container-van  .caixa-vantagem-c p {
+        font-size: 1.375rem;
+    }
+}

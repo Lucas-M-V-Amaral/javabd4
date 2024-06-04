@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/faq.css">
+    <script src="../static/script/script.js" defer></script>
+    <script src="../static/script/faq.js" defer></script>
+    <script src="../static/script/login.js" defer></script>
+    <title>GameBooster</title>
+</head>
+<body>
+    <div>
+        <div class="login-caixa open">
+            
+            <div class="login">
+                <div class="div-sair">
+                    <div class="sair">X</div>
+                </div>
+
+                <div class="login-texto">
+                    <h1>Efetuar Login</h1>
+
+                    <p>Acesse sua conta GameBooster</p>
+                </div>
+
+                <div class="continuar-ops">
+                    <div class="continuar">
+                        <img src="../static/imagens/google.png" alt="Logo do Google">
+                        <p>Continuar com o Google</p>
+                    </div>
+
+                    <div class="continuar">
+                        <img src="../static/imagens/facebook.png" alt="Logo do Facebook.">
+                        <p>Continuar com o Facebook</p>
+                    </div>
+
+                    <div class="continuar">
+                        <img src="../static/imagens/discord-icon.png" alt="Logo do Discord.">
+                        <p>Continuar com o Discord</p>
+                    </div>
+                </div>
+
+                <div class="centraliza-log">
+                    <div class="div-ou">
+                        <div></div>
+                        
+                        <p>ou</p>
+    
+                        <div></div>
+                    </div>
+                </div>
+                
+                <div class="email-senha">
+                    <form action="#" class="form" id="login-form">
+                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail ou login">
+
+                        <input type="password" name="senha" id="senha" maxlength="14" placeholder="Digite sua senha">
+
+
+                        <p class="esq-sen">Esqueceu a senha?</p>
+
+                        <div class="confirmar">
+                            <button type="submit">Confirmar</button>
+                        </div>
+                        <div class="confirmar">
+                            <p class="nao-conta">Não possui uma conta? <a class="cadastre" href="#">Cadastre-se</a></p>
+                        </div>
+                    </form>
+                    <img src="../static//imagens/ZKZg.gif" alt="" class="loading-gif"/>
+                </div>
+
+                <div class="confirmar">
+                    <button>Confirmar</button>
+                </div>
+
+                <div class="confirmar">
+                    <p class="nao-conta">Não possui uma conta? <a class="cadastre" href="#">Cadastre-se</a></p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container-header">
+            <div class="logo-header">
+                <a class="logo-cv" th:href="@{/}">
+                    <img class="logo-cv" src="../static/imagens/logo-cv.png" alt="Logo da Gamebooster">
+                </a>
+            </div>
+
+            <!-- ========== MENU DESKTOP (VERSÃO DO PROJETO FINAL) ========== -->
+            <nav class="nav-comp">
+                <ul class="itens-nav">
+                    <li class="container-servicos">
+                        <span class="servicos">Serviços</span>
+                        <ul class="caixa-servicos">
+                            <li><a th:href="@{/contas}" class="servico borda-f">PokeXGames</a></li>
+                            <li><a th:href="@{/lol}" class="servico borda-f">League of Legends</a></li>
+                            <li><a th:href="@{/contas}" class="servico borda-f">Contas</a></li>
+                            <li><a th:href="@{/precos}" class="servico men">Preços</a></li>
+                        </ul>
+                    </li>
+                    <li class="brilinho"><a th:href="@{/contato}">Contato</a></li>
+                    <li class="brilinho"><a th:href="@{/avaliacoes}">Avaliações</a></li>
+                    <li class="brilinho"><a th:href="@{/faq}">FAQ</a></li>
+                    <button id="theme-button">Mudar tema</button>
+                    <li>
+                        <button id="botao-login">
+                            <img class="passar-c" src="../static/imagens/avatar-brilho.svg" alt="Icone de login com brilho.">
+                            <img class="mostrada" src="../static/imagens/avatar.svg" alt="Icone de login.">
+                            <span>Login</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <!-- ============================================================= -->
+
+            <!-- ========== MENU RESPONSIVO (VERSÃO DO PROJETO FINAL) ========== -->
+
+            <nav class="nav-cel">
+                <div class="menu-ham">
+
+                    <input id="caixa-invisivel" type="checkbox">
+
+                    <div class="fatias">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <ul class="menu">
+                        <li class="menu-ham-tipog">
+                            <a th:href="@{/}"><img src="../static/imagens/tipografia.png"
+                                    alt="GameBooster escrito de forma estilizada."></a>
+
+                            <div class="menu-x">
+                                <input id="caixa-invisivel-2" type="checkbox">
+
+                                <div class="x-ham">
+                                    <span class="x1"></span>
+                                    <span class="x2"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <input id="invisivel-servicos" type="checkbox">
+                        <li class="container-servicos-2">
+                            <span class="servicos-ham">Serviços -></span>
+                            <ul class="caixa-servicos-2">
+                                <li class="servicosabcd" id="servico-a"><a th:href="@{/contas}">PokeXGames</a></li>
+                                <li class="servicosabcd" id="servico-b"><a th:href="@{/lol}">League of Legends</a></li>
+                                <li class="servicosabcd" id="servico-c"><a th:href="@{/contas}">Contas</a></li>
+                                <!-- <li class="servicosabcd" id="servico-d"><a th:href="@{/contas}">Contas</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="margem"></li>
+                        <li class="margem2"></li>
+                        <!-- <li class="brilinho"><a href="#">Intermédios</a></li> -->
+                        <li><a th:href="@{/precos}">Preços</a></li>
+                        <li><a th:href="@{/contato}">Contato</a></li>
+                        <li><a th:href="@{/avaliacoes}">Avaliações</a></li>
+                        <li><a th:href="@{/faq}">FAQ</a></li>
+                        <li><button class="theme-button">Mudar tema</button></li>
+                        <li class="menu-ham-log">
+                            <button id="botao-login-ham">LOGIN</button>
+                        </li>
+                        <li></li> <!-- Não apague isso -->
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- ============================================================= -->
+
+        </div>
+    </header>
+
+    <main>
+        <div class="caixa-titulo-av">
+            <h1>FICOU COM DÚVIDAS? NÃO SE PREOCUPE, AQUI VOCÊ RESOLVE!</h1>
+
+            <p>Nossa seção de perguntas frequentes é constantemente atualizada e preparada para te ajudar, mas se a dúvida persistir, lembre-se que possuímos diversas formas de contato, ok?!</p>
+        
+            <form class="pesquisa-container">
+                <label for="busca" class="lupa">
+                    <img src="../static/imagens/search-icon.png" alt="Um Ícone de uma Lupa.">
+                </label>
+                <input class="area-busca" id="busca" type="search" placeholder="Digite aqui um tópico ou termo específico">
+                <input class="botao-busca" type="submit" value="BUSCAR">
+                    
+            </form>
+        </div>
+
+        <div class="topicos-faq">
+            <ul>
+                <li class="categoria">
+                    <input type="radio" name="topico" id="pagamento" value="pagamento" onclick="mostrarFAQ('faq-pagamento')" checked>
+                    <label for="pagamento">
+                        <h2 class="topic-tab">PAGAMENTO</h2>
+                    </label>
+                </li>
+                <li class="categoria">
+                    <input type="radio" name="topico" id="requisitos" value="requisitos" onclick="mostrarFAQ('faq-requisitos')">
+                    <label for="requisitos">
+                        <h2 class="topic-tab">REQUISITOS</h2>
+                    </label>
+                </li>
+                <li class="categoria">
+                    <input type="radio" name="topico" id="prazos" value="prazos" onclick="mostrarFAQ('faq-prazos')">
+                    <label for="prazos">
+                        <h2 class="topic-tab">PRAZOS</h2>
+                    </label>
+                </li>
+                <li class="categoria">
+                    <input type="radio" name="topico" id="seguranca" value="seguranca" onclick="mostrarFAQ('faq-seguranca')">
+                    <label for="seguranca">
+                        <h2 class="topic-tab">SEGURANÇA</h2>
+                    </label>
+                </li>
+                <li class="categoria">
+                    <input type="radio" name="topico" id="privacidade" value="privacidade" onclick="mostrarFAQ('faq-privacidade')">
+                    <label for="privacidade">
+                        <h2 class="topic-tab">PRIVACIDADE</h2>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="caixa-faq">
+            <div class="faq-content">
+                <ul class="accordion" id="faq-pagamento">
+                    
+                    <li class="caixa-info-cima">
+                        <input type="checkbox" name="faq" id="pagamento1" onclick="plusFlip(event)">
+                        <label for="pagamento1">Quais são as formas de pagamento aceitas?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <div class="content">
+                            <p>Atualmente, trabalhamos com Pix, PicPay ou PayPal, com possibilidade de expansão futura.</p>
+                        </div>
+                    </li>
+
+                    <li class="caixa-info-cima">
+                        <input type="checkbox" name="faq" id="pagamento2" class="noFlip" onclick="plusFlip(event)">
+                        <label for="pagamento2">Posso fazer pagamento via transferência?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <div class="content">
+                            <p>Atualmente não trabalhamos com transferências via DOC/TED, porém existe a opção de transferência via Pix.</p>
+                        </div>
+                    </li>
+
+                    <li class="caixa-info-cima">
+                        <input type="checkbox" name="faq" id="pagamento3" class="noFlip" onclick="plusFlip(event)">
+                        <label for="pagamento3">Posso pagar depois do serviço realizado?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <div class="content">
+                            <p>Os serviços apenas serão realizados após o processamento do pagamento, desta forma, não trabalhamos com transações financeiras posteriores, inclusive para vendas de KK's e contas.</p>
+                        </div>
+                    </li>
+
+                    <li class="caixa-info-cima">
+                        <input type="checkbox" name="faq" id="pagamento4" class="noFlip" onclick="plusFlip(event)">
+                        <label for="pagamento4">Solicitei o serviço errado. Posso pedir estorno?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <div class="content">
+                            <p>A PREENCHER.</p>
+                        </div>
+                    </li>
+
+                    <li class="caixa-info-cima">
+                        <input type="checkbox" name="faq" id="pagamento5" class="noFlip" onclick="plusFlip(event)">
+                        <label for="pagamento5">Como saber se meu pagamento foi aprovado?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <div class="content">
+                            <p>A PREENCHER.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="accordion" id="faq-requisitos">
+                    <li class="caixa-info-cima">
+                        <input type="checkbox" name="faq" id="requisitos1" class="noFlip" onclick="plusFlip(event)">
+                        <label for="requisitos1">Vocês disponibilizam os pokemons e recursos necessários para as quests?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <div class="content">
+                            <p>Todos pokemons e recursos devem ser fornecidos pelo cliente. Além disso, caso ocorra alguma morte, nossa equipe não se responsabiliza pelo pagamento de bless perdida.</p>
+                        </div>
+                    </li>
+
+                    <li class="caixa-info-cima">
+                        <input type="checkbox" name="faq" id="requisitos2" class="noFlip" onclick="plusFlip(event)">
+                        <label for="requisitos2">O que preciso possuir em minha conta para solicitar um service?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <div class="content">
+                            <p>Cada service possui requisitos específicos que estarão listados na própria página de services disponíveis.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="accordion" id="faq-prazos">
+                    <li class="caixa-info-cima">
+                        <input type="checkbox" name="faq" id="prazos1" onclick="plusFlip(event)">
+                        <label for="prazos1">Em quanto tempo o serviço é finalizado?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <div class="content">
+                            <p>A PREENCHER.</p>
+                        </div>
+                    </li>
+
+                    <li class="caixa-info-cima">
+                        <input type="checkbox" name="faq" id="prazos2" class="noFlip" onclick="plusFlip(event)">
+                        <label for="prazos2">Em quanto tempo terei acesso à conta comprada?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <div class="content">
+                            <p>A PREENCHER.</p>
+                        </div>
+                    </li>
+                    
+                    <li class="caixa-info-cima">
+                        <input type="checkbox" name="faq" id="prazos3" class="noFlip" onclick="plusFlip(event)">
+                        <label for="prazos3">Qual o prazo de entrega de KKs?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <div class="content">
+                            <p>A PREENCHER.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-area">
+            <div class="caixa-footer">
+                <div class="declaracao">
+                    <img class="tipografia-pb" src="../static/imagens/tipografia-PeB.png" alt="GameBooster escrito de forma estilizada.">
+                    <p>A GameBooster© declara que não possui vínculo algum com as empresas responsáveis pelos jogos citados nesta página.</p>
+                </div>
+
+                <nav class="opcoes-footer">
+
+                    <ul class="coluna-footer">
+                        <li>Legal</li>
+                        <li><a class="brilinho" href="#">Termos de Uso</a></li>
+                        <li><a class="brilinho" href="#">Política de Privacidade</a></li>
+                    </ul>
+
+                    <ul class="coluna-footer">
+                        <li>Suporte</li>
+                        <li><a class="brilinho" href="#">WhatsApp</a></li>
+                        <li><a class="brilinho" href="#">Chat Online</a></li>
+                        <li><a class="brilinho" href="#">E-mail</a></li>
+                    </ul>
+                    
+                    <ul class="coluna-footer">
+                        <li>Jogos</li>
+                        <li><a class="brilinho" href="#">PokeXGames - PxG</a></li>
+                        <li><a class="brilinho" th:href="@{/lol}">League of Legends</a></li>
+                        <li><a class="brilinho" href="#">Tibia</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+
+            <div class="footer-final">
+                <p>© 2023 GameBooster Inc. Todos os direitos reservados.</p>
+                <div class="flex-logos-footer">
+                    <a href="#"><img class="logos-footer" src="../static/imagens/facebook-logo-b.png" alt="Logo do Facebook."></a>
+                    <a href="#"><img class="logos-footer" src="../static/imagens/instagram-logo-b.png" alt="Logo do Instagram."></a>
+                    <a href="#"><img class="logos-footer" src="../static/imagens/discord-logo-b.png" alt="Logo do Discord."></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../static/script/login.js" type="module"></script>
+</body>
+</html>

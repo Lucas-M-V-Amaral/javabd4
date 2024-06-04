@@ -1,0 +1,206 @@
+
+.caixa-titulo-av {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.caixa-titulo-av h1 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.caixa-titulo-av p {
+    text-align: center;
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.pesquisa-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.lupa {
+    background-color: #ffffff;
+    border-radius: 40px 0px 0px 40px;
+    height: 65px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lupa img {
+    max-width: 100%;
+    height: auto;
+    filter: opacity(0.5)
+}
+
+.area-busca {
+    height: 65px;
+    width: 550px;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+}
+
+.botao-busca {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 1.16rem;
+    background-color: #FF2400;
+    height: 65px;
+    width: 140px;
+    border-radius: 0px 40px 40px 0px;
+    border: none;
+    transition: 150ms;
+}
+
+.botao-busca:hover {
+    background-color: #B81A00;
+    cursor: pointer;
+}
+
+.topicos-faq ul {
+    max-width: 1000px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.topicos-faq h2 {
+    margin: 0;
+    font-size: 1.75rem;
+    color: #4e4e4e;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #4e4e4e;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.topicos-faq input[type="radio"]:checked + label > h2 {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+[data-theme="light"] .topicos-faq input[type="radio"]:checked + label > h2  {
+    color: #000;
+    border-color: #1d1d1d;
+}
+
+.topic-tab:hover {
+    color: #777777;
+    border-color: #777777;
+}
+
+.caixa-faq {
+    max-width: 1240px;
+    min-height: 800px;
+    margin: -50px auto;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("/imagens/charizard.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.accordion {
+    display: none;
+}
+
+#faq-pagamento {
+    display: block;
+}
+
+.accordion li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.20);
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.accordion label {
+    cursor: pointer;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    color: #FFFFFF;
+    font-family: Cabin;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bold;
+    padding: 3% 4%;
+}
+
+.plus {
+    width: 40px;
+    transform: rotate(45deg);
+    transform-style: flat;
+    transition: all 270ms;
+}
+
+.flip + label img {
+    transform: rotate(90deg);
+}
+
+.accordion input,
+.topicos-faq input {
+    display: none;
+}
+
+.content {
+    width: 100%;
+    background-color: #252525;
+    border-radius: 0 0 20px 20px;
+    font-family: Cabin;
+    font-size: 1.15rem;
+    font-style: normal;
+    line-height: 1.8rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+    padding: 0 4%;
+}
+
+.content p {
+    color: #979797;
+}
+
+.accordion input[type="checkbox"]:checked + label + .content {
+    max-height: 300px;
+    padding: 3% 4%;
+}
+
+.caixa-info-cima {
+    height: auto;
+    line-height: 1.8rem;
+    max-width: 50%;
+    width: 588px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0e0e0e;
+    border-radius: 20px;
+}
+
+.caixa-info-cima:first-child {
+    margin-top: 80px;
+}

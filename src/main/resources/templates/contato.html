@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/contato.css">
+    <script src="../static/script/script.js" defer></script>
+    <script src="../static/script/contato.js" defer></script>
+    <script src="../static/script/login.js" defer></script>
+    <title>GameBooster - Contato</title>
+</head>
+<body>
+    <div>
+        <div class="login-caixa open">
+            
+            <div class="login">
+                <div class="div-sair">
+                    <div class="sair">X</div>
+                </div>
+
+                <div class="login-texto">
+                    <h1>Efetuar Login</h1>
+
+                    <p>Acesse sua conta GameBooster</p>
+                </div>
+
+                <div class="continuar-ops">
+                    <div class="continuar">
+                        <img src="../static/imagens/google.png" alt="Logo do Google">
+                        <p>Continuar com o Google</p>
+                    </div>
+
+                    <div class="continuar">
+                        <img src="../static/imagens/facebook.png" alt="Logo do Facebook.">
+                        <p>Continuar com o Facebook</p>
+                    </div>
+
+                    <div class="continuar">
+                        <img src="../static/imagens/discord-icon.png" alt="Logo do Discord.">
+                        <p>Continuar com o Discord</p>
+                    </div>
+                </div>
+
+                <div class="centraliza-log">
+                    <div class="div-ou">
+                        <div></div>
+                        
+                        <p>ou</p>
+    
+                        <div></div>
+                    </div>
+                </div>
+                
+                <div class="email-senha">
+                    <form action="#" class="form" id="login-form">
+                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail ou login">
+
+                        <input type="password" name="senha" id="senha" maxlength="14" placeholder="Digite sua senha">
+
+
+                        <p class="esq-sen">Esqueceu a senha?</p>
+
+                        <div class="confirmar">
+                            <button type="submit">Confirmar</button>
+                        </div>
+                        <div class="confirmar">
+                            <p class="nao-conta">Não possui uma conta? <a class="cadastre" href="#">Cadastre-se</a></p>
+                        </div>
+                    </form>
+                    <img src="../static//imagens/ZKZg.gif" alt="" class="loading-gif"/>
+                </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container-header">
+            <div class="logo-header">
+                <a class="logo-cv" th:href="@{/}">
+                    <img class="logo-cv" src="../static/imagens/logo-cv.png" alt="Logo da Gamebooster">
+                </a>
+            </div>
+
+            <!-- ========== MENU DESKTOP (VERSÃO DO PROJETO FINAL) ========== -->
+            <nav class="nav-comp">
+                <ul class="itens-nav">
+                    <li class="container-servicos">
+                        <span class="servicos">Serviços</span>
+                        <ul class="caixa-servicos">
+                            <li><a th:href="@{/contas}" class="servico borda-f">PokeXGames</a></li>
+                            <li><a th:href="@{/lol}" class="servico borda-f">League of Legends</a></li>
+                            <li><a th:href="@{/contas}" class="servico borda-f">Contas</a></li>
+                            <li><a th:href="@{/precos}" class="servico men">Preços</a></li>
+                        </ul>
+                    </li>
+                    <li class="brilinho"><a th:href="@{/contato}">Contato</a></li>
+                    <li class="brilinho"><a th:href="@{/avaliacoes}">Avaliações</a></li>
+                    <li class="brilinho"><a th:href="@{/faq}">FAQ</a></li>
+                    <button id="theme-button">Mudar tema</button>
+                    <li>
+                        <button id="botao-login">
+                            <img class="passar-c" src="../static/imagens/avatar-brilho.svg" alt="Icone de login com brilho.">
+                            <img class="mostrada" src="../static/imagens/avatar.svg" alt="Icone de login.">
+                            <span>Login</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <!-- ============================================================= -->
+
+            <!-- ========== MENU RESPONSIVO (VERSÃO DO PROJETO FINAL) ========== -->
+
+            <nav class="nav-cel">
+                <div class="menu-ham">
+
+                    <input id="caixa-invisivel" type="checkbox">
+
+                    <div class="fatias">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <ul class="menu">
+                        <li class="menu-ham-tipog">
+                            <a th:href="@{/}"><img src="../static/imagens/tipografia.png"
+                                    alt="GameBooster escrito de forma estilizada."></a>
+
+                            <div class="menu-x">
+                                <input id="caixa-invisivel-2" type="checkbox">
+
+                                <div class="x-ham">
+                                    <span class="x1"></span>
+                                    <span class="x2"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <input id="invisivel-servicos" type="checkbox">
+                        <li class="container-servicos-2">
+                            <span class="servicos-ham">Serviços -></span>
+                            <ul class="caixa-servicos-2">
+                                <li class="servicosabcd" id="servico-a"><a th:href="@{/contas}">PokeXGames</a></li>
+                                <li class="servicosabcd" id="servico-b"><a th:href="@{/lol}">League of Legends</a></li>
+                                <li class="servicosabcd" id="servico-c"><a th:href="@{/contas}">Contas</a></li>
+                                <!-- <li class="servicosabcd" id="servico-d"><a th:href="@{/contas}">Contas</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="margem"></li>
+                        <li class="margem2"></li>
+                        <!-- <li class="brilinho"><a href="#">Intermédios</a></li> -->
+                        <li><a th:href="@{/precos}">Preços</a></li>
+                        <li><a th:href="@{/contato}">Contato</a></li>
+                        <li><a th:href="@{/avaliacoes}">Avaliações</a></li>
+                        <li><a th:href="@{/faq}">FAQ</a></li>
+                        <li><button class="theme-button">Mudar tema</button></li>
+                        <li class="menu-ham-log">
+                            <button id="botao-login-ham">LOGIN</button>
+                        </li>
+                        <li></li> <!-- Não apague isso -->
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- ============================================================= -->
+
+        </div>
+    </header>
+
+  <main id="principal" class="conta-teste">
+    <section class="container">
+      <div class="parte-esq ctt">
+          <h1 class="pxg-conta-titulo">ENTRE EM CONTATO</h1>  
+
+          <p class="pxg-conta-texto">Nesta seção você pode entrar em contato conosco e deixar sua mensagem para nossa equipe. Seja ela uma dúvida, sugestão ou crítica, avaliaremos com todo cuidado e, sempre que possível, retornaremos com feedback</p>
+
+      </div>
+    </section>
+
+    <div class="imagem-pxg">
+        <img class="img-pxg" src="../static/imagens/equipe.png" alt="">
+    </div>
+
+    <section class="filtro">
+      <div class="filtro-header">FORMULÁRIO DE CONTATO</div>
+
+      <form id="contatos-gerais" action=""method="post">
+        <!--nome, e-mail, telefone, mensagem -->
+        
+        <div id="avisos"></div>
+
+        <p><abbr class="req"title="required">* </abbr> Campos obrigatórios estão marcados com um asterisco.</p>
+
+        <div class="filtro-input">
+            <label class="filter-tag" for="nome">Nome: <abbr class="req"title="required">*</abbr></label>
+            <input type="text"id="nome"name="nome"class="text-input"placeholder="Digite seu nome"autocomplete="name">
+        </div>
+
+        <div class="filtro-input">
+            <label class="filter-tag"for="email-form">E-Mail: <abbr class="req"title="required">*</abbr></label>
+            <input type="email"id="email-form"name="email-form"class="text-input"placeholder="exemplo@gamebooster.com"autocomplete="email">
+        </div>
+        
+        <div class="filtro-input">
+            <label class="filter-tag"for="telefone">Telefone: (xx) x xxxx-xxxx </label>
+            <input type="tel"id="telefone"name="telefone"class="text-input"placeholder="Exemplo: (13) 9 8765-4321"autocomplete="tel-national">
+        </div>
+        
+        <div class="filtro-input">
+            <label class="filter-tag"for="msg">Mensagem: <abbr class="req"title="required">*</abbr></label>
+            <textarea id="msg"name="msg"class="text-input msg"autocomplete="off"></textarea>
+        </div>
+
+        <input class="aplicar"type="submit"value="Enviar">
+    </form>
+
+    </section>
+
+    <!-- <span class="divisoria"></span> -->
+  </main>
+
+    <footer id="rodape">
+        <div class="footer-area">
+            <div class="caixa-footer">
+                <div class="declaracao">
+                    <img class="tipografia-pb" src="../static/imagens/tipografia-PeB.png" alt="GameBooster escrito de forma estilizada.">
+                    <p>A GameBooster© declara que não possui vínculo algum com as empresas responsáveis pelos jogos citados nesta página.</p>
+                </div>
+
+                <nav class="opcoes-footer">
+
+                    <ul class="coluna-footer">
+                        <li>LEGAL</li>
+                        <li><a class="brilinho" href="#">Termos de Uso</a></li>
+                        <li><a class="brilinho" href="#">Política de Privacidade</a></li>
+                    </ul>
+
+                    <ul class="coluna-footer">
+                        <li>SUPORTE</li>
+                        <li><a class="brilinho" href="#">WhatsApp</a></li>
+                        <li><a class="brilinho" href="#">Chat Online</a></li>
+                        <li><a class="brilinho" href="#">E-mail</a></li>
+                    </ul>
+                    
+                    <ul class="coluna-footer">
+                        <li>JOGOS</li>
+                        <li><a class="brilinho" href="#">PokeXGames - PxG</a></li>
+                        <li><a class="brilinho" th:href="@{/lol}">League of Legends</a></li>
+                        <li><a class="brilinho" href="#">Tibia</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+
+            <div class="footer-final">
+                <p>© 2023 GameBooster Inc. Todos os direitos reservados.</p>
+                <div class="flex-logos-footer">
+                    <a href="https://www.facebook.com/"><img class="logos-footer" src="../static/imagens/facebook-logo-b.png" alt="Logo do Facebook."></a>
+                    <a href="https://www.instagram.com/"><img class="logos-footer" src="../static/imagens/instagram-logo-b.png" alt="Logo do Instagram."></a>
+                    <a href="https://discord.com/"><img class="logos-footer" src="../static/imagens/discord-logo-b.png" alt="Logo do Discord."></a>
+                </div>
+            </div>
+        </div>
+    </footer> 
+    <script src="../static/script/login.js" type="module"></script>
+</body>

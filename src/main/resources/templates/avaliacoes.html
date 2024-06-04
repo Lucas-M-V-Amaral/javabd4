@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/avaliacoes.css">
+    <script src="../static/script/avaliacao.js" defer></script>
+    <script src="../static/script/script.js" defer></script>
+    <script src="../static/script/login.js" defer></script>
+    <title>Avaliações</title>
+</head>
+
+<body>
+    <div>
+        <div class="login-caixa open">
+
+            <div class="login">
+                <div class="div-sair">
+                    <div class="sair">X</div>
+                </div>
+
+                <div class="login-texto">
+                    <h1>Efetuar Login</h1>
+
+                    <p>Acesse sua conta GameBooster</p>
+                </div>
+
+                <div class="continuar-ops">
+                    <div class="continuar">
+                        <img src="../static/imagens/google.png" alt="Logo do Google">
+                        <p>Continuar com o Google</p>
+                    </div>
+
+                    <div class="continuar">
+                        <img src="../static/imagens/facebook.png" alt="Logo do Facebook.">
+                        <p>Continuar com o Facebook</p>
+                    </div>
+
+                    <div class="continuar">
+                        <img src="../static/imagens/discord-icon.png" alt="Logo do Discord.">
+                        <p>Continuar com o Discord</p>
+                    </div>
+                </div>
+
+                <div class="centraliza-log">
+                    <div class="div-ou">
+                        <div></div>
+
+                        <p>ou</p>
+
+                        <div></div>
+                    </div>
+                </div>
+
+                <div class="email-senha">
+
+                    <form action="#" class="form">
+                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail ou login">
+
+                        <input type="password" name="senha" id="senha" maxlength="14" placeholder="Digite sua senha">
+                    </form>
+
+                    <p class="esq-sen">Esqueceu a senha?</p>
+
+                </div>
+
+                <div class="confirmar">
+                    <button>Confirmar</button>
+                </div>
+
+                <div class="confirmar">
+                    <p class="nao-conta">Não possui uma conta? <a class="cadastre" href="#">Cadastre-se</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container-header">
+            <div class="logo-header">
+                <a class="logo-cv" th:href="@{/}">
+                    <img class="logo-cv" src="../static/imagens/logo-cv.png" alt="Logo da Gamebooster">
+                </a>
+            </div>
+
+            <!-- ========== MENU DESKTOP (VERSÃO DO PROJETO FINAL) ========== -->
+            <nav class="nav-comp">
+                <ul class="itens-nav">
+                    <li class="container-servicos">
+                        <span class="servicos">Serviços</span>
+                        <ul class="caixa-servicos">
+                            <li><a th:href="@{/contas}" class="servico borda-f">PokeXGames</a></li>
+                            <li><a th:href="@{/lol}" class="servico borda-f">League of Legends</a></li>
+                            <li><a th:href="@{/contas}" class="servico borda-f">Contas</a></li>
+                            <li><a th:href="@{/precos}" class="servico men">Preços</a></li>
+                        </ul>
+                    </li>
+                    <li class="brilinho"><a th:href="@{/contato}">Contato</a></li>
+                    <li class="brilinho"><a th:href="@{/avaliacoes}">Avaliações</a></li>
+                    <li class="brilinho"><a th:href="@{/faq}">FAQ</a></li>
+                    <button id="theme-button">Mudar tema</button>
+                    <li>
+                        <button id="botao-login">
+                            <img class="passar-c" src="../static/imagens/avatar-brilho.svg" alt="Icone de login com brilho.">
+                            <img class="mostrada" src="../static/imagens/avatar.svg" alt="Icone de login.">
+                            <span>Login</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <!-- ============================================================= -->
+
+            <!-- ========== MENU RESPONSIVO (VERSÃO DO PROJETO FINAL) ========== -->
+
+            <nav class="nav-cel">
+                <div class="menu-ham">
+
+                    <input id="caixa-invisivel" type="checkbox">
+
+                    <div class="fatias">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <ul class="menu">
+                        <li class="menu-ham-tipog">
+                            <a th:href="@{/}"><img src="../static/imagens/tipografia.png"
+                                    alt="GameBooster escrito de forma estilizada."></a>
+
+                            <div class="menu-x">
+                                <input id="caixa-invisivel-2" type="checkbox">
+
+                                <div class="x-ham">
+                                    <span class="x1"></span>
+                                    <span class="x2"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <input id="invisivel-servicos" type="checkbox">
+                        <li class="container-servicos-2">
+                            <span class="servicos-ham">Serviços -></span>
+                            <ul class="caixa-servicos-2">
+                                <li class="servicosabcd" id="servico-a"><a th:href="@{/contas}">PokeXGames</a></li>
+                                <li class="servicosabcd" id="servico-b"><a th:href="@{/lol}">League of Legends</a></li>
+                                <li class="servicosabcd" id="servico-c"><a th:href="@{/contas}">Contas</a></li>
+                                <!-- <li class="servicosabcd" id="servico-d"><a th:href="@{/contas}">Contas</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="margem"></li>
+                        <li class="margem2"></li>
+                        <!-- <li class="brilinho"><a href="#">Intermédios</a></li> -->
+                        <li><a th:href="@{/precos}">Preços</a></li>
+                        <li><a th:href="@{/contato}">Contato</a></li>
+                        <li><a th:href="@{/avaliacoes}">Avaliações</a></li>
+                        <li><a th:href="@{/faq}">FAQ</a></li>
+                        <li><button id="theme-button">Mudar tema</button></li>
+                        <li class="menu-ham-log">
+                            <button id="botao-login-ham">LOGIN</button>
+                        </li>
+                        <li></li> <!-- Não apague isso -->
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- ============================================================= -->
+
+        </div>
+    </header>
+
+    <main>
+        <div class="caixa-titulo-av">
+            <div class="caixa-estrelas">
+                <div class="five-pointed-star"></div>
+                <div class="five-pointed-star"></div>
+                <div class="five-pointed-star"></div>
+                <div class="five-pointed-star"></div>
+                <div class="five-pointed-star"></div>
+            </div>
+
+            <h1>VEJA O FEEDBACK DOS NOSSOS CLIENTES E DA COMUNIDADE!</h1>
+
+            <p>Nossos princípios são levados a sério, por isso prezamos pela transparência e clareza nas relações
+                profissionais</p>
+        </div>
+
+        <!-- <h2 class="titulo-jogos">POKEXGAMES</h2> -->
+
+        <div class="container-av">
+
+            <img class="seta-esquerda-av" src="../static/imagens/seta-esquerda.png" alt="Uma seta apontada para a esquerda.">
+
+            <div class="caixa-comentarios">
+
+                <div class="caixa-avaliacao">
+                    <div class="caixa-avaliacao-cima">
+                        <h3>PEDIDO #001</h3>
+                        <div class="caixa-estrelas">
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                        </div>
+                    </div>
+                    <div class="caixa-avaliacao-baixo">
+                        <h4>MEWTWO FINAL QUEST</h4>
+
+                        <p>Fiquei impressionado com a rapidez do serviço e com a habilidade do jogador. Recomendarei aos
+                            amigos...</p>
+
+                        <p class="nome">• Gabriel</p>
+                    </div>
+                </div>
+
+                <div class="caixa-avaliacao">
+                    <div class="caixa-avaliacao-cima">
+                        <h3>PEDIDO #002</h3>
+                        <div class="caixa-estrelas">
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                        </div>
+                    </div>
+                    <div class="caixa-avaliacao-baixo">
+                        <h4>UNOWN CHALLENGE</h4>
+
+                        <p>Serviço rápido demais, o mano joga mto e é atencioso demais. Recomendo 100%! O cara é o
+                            bicho!</p>
+
+                        <p class="nome">• Lucas</p>
+                    </div>
+                </div>
+
+                <div class="caixa-avaliacao">
+                    <div class="caixa-avaliacao-cima">
+                        <h3>PEDIDO #003</h3>
+                        <div class="caixa-estrelas">
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                        </div>
+                    </div>
+                    <div class="caixa-avaliacao-baixo">
+                        <h4>THE CHOSEN ONE - DUNGEON</h4>
+
+                        <p>Atendimento muito bom, explicou com muita paciência e foi super gente boa. Recomendo demais!
+                        </p>
+
+                        <p class="nome">• Bárbara</p>
+                    </div>
+                </div>
+
+                <div class="caixa-avaliacao">
+                    <div class="caixa-avaliacao-cima">
+                        <h3>PEDIDO #003</h3>
+                        <div class="caixa-estrelas">
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                        </div>
+                    </div>
+                    <div class="caixa-avaliacao-baixo">
+                        <h4>THE CHOSEN ONE - DUNGEON</h4>
+
+                        <p>Atendimento muito bom, explicou com muita paciência e foi super gente boa. Recomendo demais!
+                        </p>
+
+                        <p class="nome">• Bárbara</p>
+                    </div>
+                </div>
+
+                <div class="caixa-avaliacao">
+                    <div class="caixa-avaliacao-cima">
+                        <h3>PEDIDO #003</h3>
+                        <div class="caixa-estrelas">
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                        </div>
+                    </div>
+                    <div class="caixa-avaliacao-baixo">
+                        <h4>THE CHOSEN ONE - DUNGEON</h4>
+
+                        <p>Atendimento muito bom, explicou com muita paciência e foi super gente boa. Recomendo demais!
+                        </p>
+
+                        <p class="nome">• Bárbara</p>
+                    </div>
+                </div>
+
+                <div class="caixa-avaliacao sem-margem">
+                    <div class="caixa-avaliacao-cima">
+                        <h3>PEDIDO #003</h3>
+                        <div class="caixa-estrelas">
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                        </div>
+                    </div>
+                    <div class="caixa-avaliacao-baixo">
+                        <h4>THE CHOSEN ONE - DUNGEON</h4>
+
+                        <p>Atendimento muito bom, explicou com muita paciência e foi super gente boa. Recomendo demais!
+                        </p>
+
+                        <p class="nome">• Bárbara</p>
+                    </div>
+                </div>
+            </div>
+            <img class="seta-direita-av" src="../static/imagens/seta-direita.png" alt="Uma seta apontada para a direita.">
+        </div>
+
+        <!-- <h2 class="titulo-jogos">LEAGUE OF LEGENDS</h2> -->
+
+        <div class="container-av">
+
+            <img class="seta-esquerda-av" src="../static/imagens/seta-esquerda.png" alt="Uma seta apontada para a esquerda.">
+
+            <div class="caixa-comentarios">
+
+                <div class="caixa-avaliacao">
+                    <div class="caixa-avaliacao-cima">
+                        <h3>PEDIDO #004</h3>
+                        <div class="caixa-estrelas">
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                        </div>
+                    </div>
+                    <div class="caixa-avaliacao-baixo">
+                        <h4>Eloboosting (Prata III - Ouro IV)</h4>
+
+                        <p>Muito acessível, informando todo o momento. Além de entregar o pedido de forma rápida.</p>
+
+                        <p class="nome">• Vitor</p>
+                    </div>
+                </div>
+
+                <div class="caixa-avaliacao">
+                    <div class="caixa-avaliacao-cima">
+                        <h3>PEDIDO #005</h3>
+                        <div class="caixa-estrelas">
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                        </div>
+                    </div>
+                    <div class="caixa-avaliacao-baixo">
+                        <h4>Eloboosting (Plat. II - Diam. IV)</h4>
+
+                        <p>Muito bem jogado, serviço rápido e eficiente. O cara foi gente boa e caprichou no que eu
+                            pedi.</p>
+
+                        <p class="nome">• Beatriz</p>
+                    </div>
+                </div>
+
+                <div class="caixa-avaliacao">
+                    <div class="caixa-avaliacao-cima">
+                        <h3>PEDIDO #006</h3>
+                        <div class="caixa-estrelas">
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                        </div>
+                    </div>
+                    <div class="caixa-avaliacao-baixo">
+                        <h4>MD10 (9 Jogos)</h4>
+
+                        <p>Joga muito, consegue subir de elo independente do boneco, não acreditei quando vi o que ele
+                            fez kkk.</p>
+
+                        <p class="nome">• ANÔNIMO</p>
+                    </div>
+                </div>
+            </div>
+            <img class="seta-direita-av" src="../static/imagens/seta-direita.png" alt="Uma seta apontada para a direita.">
+        </div>
+
+        <!-- <h2 class="titulo-jogos">TIBIA</h2> -->
+
+        <div class="container-av tibia">
+
+            <img class="seta-esquerda-av" src="../static/imagens/seta-esquerda.png" alt="Uma seta apontada para a esquerda.">
+
+            <div class="caixa-comentarios">
+
+                <div class="caixa-avaliacao">
+                    <div class="caixa-avaliacao-cima">
+                        <h3>PEDIDO #007</h3>
+                        <div class="caixa-estrelas">
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                        </div>
+                    </div>
+                    <div class="caixa-avaliacao-baixo">
+                        <h4>PITS OF INFERNO</h4>
+
+                        <p>Fez toda a quest com stream aberta para que eu pudesse assistir e opinar na decisão dos
+                            itens. Sensacional!</p>
+
+                        <p class="nome">• Caio</p>
+                    </div>
+                </div>
+
+                <div class="caixa-avaliacao">
+                    <div class="caixa-avaliacao-cima">
+                        <h3>PEDIDO #008</h3>
+                        <div class="caixa-estrelas">
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                        </div>
+                    </div>
+                    <div class="caixa-avaliacao-baixo">
+                        <h4>ANNIHILATOR</h4>
+
+                        <p>Meu sonho foi realizado graças a vocês da GameBooster! Não tenho palavras para agradecer!!
+                            Simplesmente demais!</p>
+
+                        <p class="nome">• Fabíola</p>
+                    </div>
+                </div>
+
+                <div class="caixa-avaliacao">
+                    <div class="caixa-avaliacao-cima">
+                        <h3>PEDIDO #009</h3>
+                        <div class="caixa-estrelas">
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                            <div class="five-pointed-star2"></div>
+                        </div>
+                    </div>
+                    <div class="caixa-avaliacao-baixo">
+                        <h4>CHAR (Lvl 211 - Elite Knight)</h4>
+
+                        <p>Char super em conta e com muitos itens no inventário. Agora posso fazer hunts para profit. Éh
+                            nois na fita!</p>
+
+                        <p class="nome">• ANÔNIMO</p>
+                    </div>
+                </div>
+            </div>
+            <img class="seta-direita-av" src="../static/imagens/seta-direita.png" alt="Uma seta apontada para a direita.">
+        </div>
+    </main>
+
+    <footer>
+
+        <div class="footer-area">
+            <div class="caixa-footer">
+                <div class="declaracao">
+                    <img class="tipografia-pb" src="../static/imagens/tipografia-PeB.png"
+                        alt="GameBooster escrito de forma estilizada.">
+                    <p>A GameBooster© declara que não possui vínculo algum com as empresas responsáveis pelos jogos
+                        citados nesta página.</p>
+                </div>
+
+                <nav class="opcoes-footer">
+
+                    <ul class="coluna-footer">
+                        <li>Legal</li>
+                        <li><a class="brilinho" href="#">Termos de Uso</a></li>
+                        <li><a class="brilinho" href="#">Política de Privacidade</a></li>
+                    </ul>
+
+                    <ul class="coluna-footer">
+                        <li>Suporte</li>
+                        <li><a class="brilinho" href="#">WhatsApp</a></li>
+                        <li><a class="brilinho" href="#">Chat Online</a></li>
+                        <li><a class="brilinho" href="#">E-mail</a></li>
+                    </ul>
+
+                    <ul class="coluna-footer">
+                        <li>Jogos</li>
+                        <li><a class="brilinho" href="#">PokeXGames - PxG</a></li>
+                        <li><a class="brilinho" th:href="@{/lol}">League of Legends</a></li>
+                        <li><a class="brilinho" href="#">Tibia</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+
+            <div class="footer-final">
+                <p>© 2023 GameBooster Inc. Todos os direitos reservados.</p>
+                <div class="flex-logos-footer">
+                    <a href="#"><img class="logos-footer" src="../static/imagens/facebook-logo-b.png" alt="Logo do Facebook."></a>
+                    <a href="#"><img class="logos-footer" src="../static/imagens/instagram-logo-b.png"
+                            alt="Logo do Instagram."></a>
+                    <a href="#"><img class="logos-footer" src="../static/imagens/discord-logo-b.png" alt="Logo do Discord."></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

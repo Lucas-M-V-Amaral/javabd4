@@ -24,6 +24,21 @@ public class IndexController {
         return "index";
     }
 
+    @GetMapping("/avaliacoes")
+    public String avaliacoes(){
+        return "avaliacoes";
+    }
+
+    @GetMapping("/contato")
+    public String contato(){
+        return "contato";
+    }
+
+    @GetMapping("/faq")
+    public String faq(){
+        return "faq";
+    }
+
     @GetMapping("/cadastrar")
     public String cadastrar(Model model){
         model.addAttribute("cliente", new Cliente());
