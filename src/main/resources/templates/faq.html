@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../static/css/common.css">
-    <link rel="stylesheet" href="../static/css/faq.css">
-    <script src="../static/script/script.js" defer></script>
-    <script src="../static/script/faq.js" defer></script>
-    <script src="../static/script/login.js" defer></script>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/faq.css">
+    <script src="/script/script.js" defer></script>
+    <script src="/script/faq.js" defer></script>
+    <script src="/script/login.js" defer></script>
     <title>GameBooster</title>
 </head>
 <body>
@@ -27,17 +27,17 @@
 
                 <div class="continuar-ops">
                     <div class="continuar">
-                        <img src="../static/imagens/google.png" alt="Logo do Google">
+                        <img src="/imagens/google.png" alt="Logo do Google">
                         <p>Continuar com o Google</p>
                     </div>
 
                     <div class="continuar">
-                        <img src="../static/imagens/facebook.png" alt="Logo do Facebook.">
+                        <img src="/imagens/facebook.png" alt="Logo do Facebook.">
                         <p>Continuar com o Facebook</p>
                     </div>
 
                     <div class="continuar">
-                        <img src="../static/imagens/discord-icon.png" alt="Logo do Discord.">
+                        <img src="/imagens/discord-icon.png" alt="Logo do Discord.">
                         <p>Continuar com o Discord</p>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                             <p class="nao-conta">Não possui uma conta? <a class="cadastre" href="#">Cadastre-se</a></p>
                         </div>
                     </form>
-                    <img src="../static//imagens/ZKZg.gif" alt="" class="loading-gif"/>
+                    <img src="//imagens/ZKZg.gif" alt="" class="loading-gif"/>
                 </div>
 
                 <div class="confirmar">
@@ -87,7 +87,7 @@
         <div class="container-header">
             <div class="logo-header">
                 <a class="logo-cv" th:href="@{/}">
-                    <img class="logo-cv" src="../static/imagens/logo-cv.png" alt="Logo da Gamebooster">
+                    <img class="logo-cv" src="/imagens/logo-cv.png" alt="Logo da Gamebooster">
                 </a>
             </div>
 
@@ -109,8 +109,8 @@
                     <button id="theme-button">Mudar tema</button>
                     <li>
                         <button id="botao-login">
-                            <img class="passar-c" src="../static/imagens/avatar-brilho.svg" alt="Icone de login com brilho.">
-                            <img class="mostrada" src="../static/imagens/avatar.svg" alt="Icone de login.">
+                            <img class="passar-c" src="/imagens/avatar-brilho.svg" alt="Icone de login com brilho.">
+                            <img class="mostrada" src="/imagens/avatar.svg" alt="Icone de login.">
                             <span>Login</span>
                         </button>
                     </li>
@@ -133,7 +133,7 @@
 
                     <ul class="menu">
                         <li class="menu-ham-tipog">
-                            <a th:href="@{/}"><img src="../static/imagens/tipografia.png"
+                            <a th:href="@{/}"><img src="/imagens/tipografia.png"
                                     alt="GameBooster escrito de forma estilizada."></a>
 
                             <div class="menu-x">
@@ -184,7 +184,7 @@
         
             <form class="pesquisa-container">
                 <label for="busca" class="lupa">
-                    <img src="../static/imagens/search-icon.png" alt="Um Ícone de uma Lupa.">
+                    <img src="/imagens/search-icon.png" alt="Um Ícone de uma Lupa.">
                 </label>
                 <input class="area-busca" id="busca" type="search" placeholder="Digite aqui um tópico ou termo específico">
                 <input class="botao-busca" type="submit" value="BUSCAR">
@@ -233,7 +233,7 @@
                     
                     <li class="caixa-info-cima">
                         <input type="checkbox" name="faq" id="pagamento1" onclick="plusFlip(event)">
-                        <label for="pagamento1">Quais são as formas de pagamento aceitas?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <label for="pagamento1">Quais são as formas de pagamento aceitas?<img class="plus" src="/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
                         <div class="content">
                             <p>Atualmente, trabalhamos com Pix, PicPay ou PayPal, com possibilidade de expansão futura.</p>
                         </div>
@@ -241,7 +241,7 @@
 
                     <li class="caixa-info-cima">
                         <input type="checkbox" name="faq" id="pagamento2" class="noFlip" onclick="plusFlip(event)">
-                        <label for="pagamento2">Posso fazer pagamento via transferência?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <label for="pagamento2">Posso fazer pagamento via transferência?<img class="plus" src="/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
                         <div class="content">
                             <p>Atualmente não trabalhamos com transferências via DOC/TED, porém existe a opção de transferência via Pix.</p>
                         </div>
@@ -249,7 +249,7 @@
 
                     <li class="caixa-info-cima">
                         <input type="checkbox" name="faq" id="pagamento3" class="noFlip" onclick="plusFlip(event)">
-                        <label for="pagamento3">Posso pagar depois do serviço realizado?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <label for="pagamento3">Posso pagar depois do serviço realizado?<img class="plus" src="/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
                         <div class="content">
                             <p>Os serviços apenas serão realizados após o processamento do pagamento, desta forma, não trabalhamos com transações financeiras posteriores, inclusive para vendas de KK's e contas.</p>
                         </div>
@@ -257,7 +257,7 @@
 
                     <li class="caixa-info-cima">
                         <input type="checkbox" name="faq" id="pagamento4" class="noFlip" onclick="plusFlip(event)">
-                        <label for="pagamento4">Solicitei o serviço errado. Posso pedir estorno?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <label for="pagamento4">Solicitei o serviço errado. Posso pedir estorno?<img class="plus" src="/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
                         <div class="content">
                             <p>A PREENCHER.</p>
                         </div>
@@ -265,7 +265,7 @@
 
                     <li class="caixa-info-cima">
                         <input type="checkbox" name="faq" id="pagamento5" class="noFlip" onclick="plusFlip(event)">
-                        <label for="pagamento5">Como saber se meu pagamento foi aprovado?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <label for="pagamento5">Como saber se meu pagamento foi aprovado?<img class="plus" src="/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
                         <div class="content">
                             <p>A PREENCHER.</p>
                         </div>
@@ -275,7 +275,7 @@
                 <ul class="accordion" id="faq-requisitos">
                     <li class="caixa-info-cima">
                         <input type="checkbox" name="faq" id="requisitos1" class="noFlip" onclick="plusFlip(event)">
-                        <label for="requisitos1">Vocês disponibilizam os pokemons e recursos necessários para as quests?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <label for="requisitos1">Vocês disponibilizam os pokemons e recursos necessários para as quests?<img class="plus" src="/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
                         <div class="content">
                             <p>Todos pokemons e recursos devem ser fornecidos pelo cliente. Além disso, caso ocorra alguma morte, nossa equipe não se responsabiliza pelo pagamento de bless perdida.</p>
                         </div>
@@ -283,7 +283,7 @@
 
                     <li class="caixa-info-cima">
                         <input type="checkbox" name="faq" id="requisitos2" class="noFlip" onclick="plusFlip(event)">
-                        <label for="requisitos2">O que preciso possuir em minha conta para solicitar um service?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <label for="requisitos2">O que preciso possuir em minha conta para solicitar um service?<img class="plus" src="/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
                         <div class="content">
                             <p>Cada service possui requisitos específicos que estarão listados na própria página de services disponíveis.</p>
                         </div>
@@ -293,7 +293,7 @@
                 <ul class="accordion" id="faq-prazos">
                     <li class="caixa-info-cima">
                         <input type="checkbox" name="faq" id="prazos1" onclick="plusFlip(event)">
-                        <label for="prazos1">Em quanto tempo o serviço é finalizado?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <label for="prazos1">Em quanto tempo o serviço é finalizado?<img class="plus" src="/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
                         <div class="content">
                             <p>A PREENCHER.</p>
                         </div>
@@ -301,7 +301,7 @@
 
                     <li class="caixa-info-cima">
                         <input type="checkbox" name="faq" id="prazos2" class="noFlip" onclick="plusFlip(event)">
-                        <label for="prazos2">Em quanto tempo terei acesso à conta comprada?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <label for="prazos2">Em quanto tempo terei acesso à conta comprada?<img class="plus" src="/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
                         <div class="content">
                             <p>A PREENCHER.</p>
                         </div>
@@ -309,7 +309,7 @@
                     
                     <li class="caixa-info-cima">
                         <input type="checkbox" name="faq" id="prazos3" class="noFlip" onclick="plusFlip(event)">
-                        <label for="prazos3">Qual o prazo de entrega de KKs?<img class="plus" src="../static/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
+                        <label for="prazos3">Qual o prazo de entrega de KKs?<img class="plus" src="/imagens/plus.png" alt="Ícone circular com símbolo de adição"></label>
                         <div class="content">
                             <p>A PREENCHER.</p>
                         </div>
@@ -325,7 +325,7 @@
         <div class="footer-area">
             <div class="caixa-footer">
                 <div class="declaracao">
-                    <img class="tipografia-pb" src="../static/imagens/tipografia-PeB.png" alt="GameBooster escrito de forma estilizada.">
+                    <img class="tipografia-pb" src="/imagens/tipografia-PeB.png" alt="GameBooster escrito de forma estilizada.">
                     <p>A GameBooster© declara que não possui vínculo algum com as empresas responsáveis pelos jogos citados nesta página.</p>
                 </div>
 
@@ -357,13 +357,13 @@
             <div class="footer-final">
                 <p>© 2023 GameBooster Inc. Todos os direitos reservados.</p>
                 <div class="flex-logos-footer">
-                    <a href="#"><img class="logos-footer" src="../static/imagens/facebook-logo-b.png" alt="Logo do Facebook."></a>
-                    <a href="#"><img class="logos-footer" src="../static/imagens/instagram-logo-b.png" alt="Logo do Instagram."></a>
-                    <a href="#"><img class="logos-footer" src="../static/imagens/discord-logo-b.png" alt="Logo do Discord."></a>
+                    <a href="#"><img class="logos-footer" src="/imagens/facebook-logo-b.png" alt="Logo do Facebook."></a>
+                    <a href="#"><img class="logos-footer" src="/imagens/instagram-logo-b.png" alt="Logo do Instagram."></a>
+                    <a href="#"><img class="logos-footer" src="/imagens/discord-logo-b.png" alt="Logo do Discord."></a>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="../static/script/login.js" type="module"></script>
+    <script src="/script/login.js" type="module"></script>
 </body>
 </html>
