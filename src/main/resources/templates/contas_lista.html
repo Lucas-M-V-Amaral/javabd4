@@ -178,7 +178,7 @@
         <div class="conta-container" th:each="conta : ${lista}">
             <section class="campo-info">
               <!-- <span class="info-conta">Clã: <p class="info-char" th:text="${conta.cla}"></p> | </span> -->
-              <span class="info-conta">Nivel: <p class="info-char" th:text="${conta.nivel}"></p> | </span>
+              <!--<span class="info-conta">Nivel: <p class="info-char" th:text="${conta.nivel}"></p> | </span>-->
               <!-- <span class="info-conta" th:text="${conta.genero}"></span> -->
               
             </section>
@@ -199,7 +199,7 @@
             </div>
             <section class="campo-preco">
               <p>valor</p>
-              <p><span class="preco-item">R$ </span><span class="centavos" th:text="${conta.valor}"></span></p>
+              <!--<p><span class="preco-item">R$ </span><span class="centavos" th:text="${conta.valor}"></span></p>-->
               <!-- <button class="botao-comprar">Comprar</button> -->
               <div class="botao-comprar">
                 <a th:href="@{'atualizar_anuncio/' + ${conta.id}}">
