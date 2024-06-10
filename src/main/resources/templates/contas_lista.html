@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/contas.css">
     <script src="/script/script.js" defer></script>
+    <script src="/script/contas.js" defer></script>
     <script src="/script/login.js" defer></script>
     <title>GameBooster</title>
 </head>
@@ -89,9 +92,9 @@
                     <li class="container-servicos">
                         <span class="servicos">Serviços</span>
                         <ul class="caixa-servicos">
-                            <li><a th:href="@{/contas}" class="servico borda-f">PokeXGames</a></li>
-                            <li><a th:href="@{/lol}" class="servico borda-f">League of Legends</a></li>
-                            <li><a th:href="@{/contas}" class="servico borda-f">Contas</a></li>
+                            <li><a th:href="@{/anunciar}" class="servico borda-f">Anunciar</a></li>
+                            <li><a th:href="@{/contas_lista}" class="servico borda-f">Contas</a></li>
+                            <li><a th:href="@{/anunciar}" class="servico borda-f">Coisas</a></li>
                             <li><a th:href="@{/precos}" class="servico men">Preços</a></li>
                         </ul>
                     </li>
@@ -141,10 +144,10 @@
                         <li class="container-servicos-2">
                             <span class="servicos-ham">Serviços -></span>
                             <ul class="caixa-servicos-2">
-                                <li class="servicosabcd" id="servico-a"><a th:href="@{/contas}">PokeXGames</a></li>
-                                <li class="servicosabcd" id="servico-b"><a th:href="@{/lol}">League of Legends</a></li>
-                                <li class="servicosabcd" id="servico-c"><a th:href="@{/contas}">Contas</a></li>
-                                <!-- <li class="servicosabcd" id="servico-d"><a th:href="@{/contas}">Contas</a></li> -->
+                                <li class="servicosabcd" id="servico-a"><a th:href="@{/anunciar}">PokeXGames</a></li>
+                                <li class="servicosabcd" id="servico-b"><a th:href="@{/contas_lista}">League of Legends</a></li>
+                                <li class="servicosabcd" id="servico-c"><a th:href="@{/anunciar}">Contas</a></li>
+                                <!-- <li class="servicosabcd" id="servico-d"><a th:href="@{/anunciar}">Contas</a></li> -->
                             </ul>
                         </li>
                         <li class="margem"></li>
@@ -169,7 +172,48 @@
     </header>
 
     <main>
-        <h1>SUCESSO!</h1>
+
+        <h1>Contas</h1>
+        
+        <div class="conta-container" th:each="conta : ${lista}">
+            <section class="campo-info">
+              <!-- <span class="info-conta">Clã: <p class="info-char" th:text="${conta.cla}"></p> | </span> -->
+              <span class="info-conta">Nivel: <p class="info-char" th:text="${conta.nivel}"></p> | </span>
+              <!-- <span class="info-conta" th:text="${conta.genero}"></span> -->
+              
+            </section>
+            <div class="outfit-container"><img src="/imagens/outfits/Seavell_Male.png" alt="Outfit Seavell Male"></div>
+            <div class="itemSet-container">
+              <div class="item-container"><img src="/imagens/itens/Hightechchip.png" alt="" class="item-pxg"></div>
+              <div class="item-container"><img src="/imagens/itens/Lorelei_Artefact.png" alt="" class="item-pxg"></div>
+              <div class="item-container"><img src="/imagens/itens/Giant_Electric_Fang.png" alt="" class="item-pxg"></div>
+              <div class="item-container"><img src="/imagens/itens/Iron_Mask.png" alt="" class="item-pxg"></div>
+            </div>
+            <div class="infos-adicionais">
+              <ul class="lista-info">
+                <li th:text="${conta.add1}"></li>
+                <li th:text="${conta.add2}"></li>
+                <!-- <li></li>
+                <li></li> -->
+              </ul>
+            </div>
+            <section class="campo-preco">
+              <p>valor</p>
+              <p><span class="preco-item">R$ </span><span class="centavos" th:text="${conta.valor}"></span></p>
+              <!-- <button class="botao-comprar">Comprar</button> -->
+              <div class="botao-comprar">
+                <a th:href="@{'atualizar_anuncio/' + ${conta.id}}">
+                    Editar
+                </a>
+            </div>
+            <div class="botao-comprar">
+                <form action="#" th:action="@{'deletar/' + ${conta.id}}" method="post">
+                    <input type="submit" value="Apagar">
+                </form>
+            </div>
+            </section>
+          </div>
+
     </main>
 
     <footer>
@@ -201,7 +245,7 @@
                     <ul class="coluna-footer">
                         <li>JOGOS</li>
                         <li><a class="brilinho" href="#">PokeXGames - PxG</a></li>
-                        <li><a class="brilinho" th:href="@{/lol}">League of Legends</a></li>
+                        <li><a class="brilinho" th:href="@{/contas_lista}">League of Legends</a></li>
                         <li><a class="brilinho" href="#">Tibia</a></li>
                     </ul>
 

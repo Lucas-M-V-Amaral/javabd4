@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/contas.css">
+    <script src="/script/script.js" defer></script>
+    <script src="/script/contas.js" defer></script>
+    <script src="/script/login.js" defer></script>
+    <title>Contas</title>
+</head>
+<body>
+  <div>
+    <div class="login-caixa open">
+        
+        <div class="login">
+            <div class="div-sair">
+                <div class="sair">X</div>
+            </div>
+
+            <div class="login-texto">
+                <h1>Efetuar Login</h1>
+
+                <p>Acesse sua conta GameBooster</p>
+            </div>
+
+            <div class="continuar-ops">
+                <div class="continuar">
+                    <img src="/imagens/google.png" alt="Logo do Google">
+                    <p>Continuar com o Google</p>
+                </div>
+
+                <div class="continuar">
+                    <img src="/imagens/facebook.png" alt="Logo do Facebook.">
+                    <p>Continuar com o Facebook</p>
+                </div>
+
+                <div class="continuar">
+                    <img src="/imagens/discord-icon.png" alt="Logo do Discord.">
+                    <p>Continuar com o Discord</p>
+                </div>
+            </div>
+
+            <div class="centraliza-log">
+                <div class="div-ou">
+                    <div></div>
+                    
+                    <p>ou</p>
+
+                    <div></div>
+                </div>
+            </div>
+            
+            <div class="email-senha">
+              <form action="#" class="form" id="login-form">
+                  <input type="email" name="email" id="email" placeholder="Digite seu e-mail ou login">
+
+                  <input type="password" name="senha" id="senha" maxlength="14" placeholder="Digite sua senha">
+
+
+                  <p class="esq-sen">Esqueceu a senha?</p>
+
+                  <div class="confirmar">
+                      <button type="submit">Confirmar</button>
+                  </div>
+                  <div class="confirmar">
+                      <p class="nao-conta">Não possui uma conta? <a class="cadastre" href="#">Cadastre-se</a></p>
+                  </div>
+              </form>
+              <img src="/imagens/ZKZg.gif" alt="" class="loading-gif"/>
+          </div>
+    </div>
+</div>
+
+<header>
+  <div class="container-header">
+      <div class="logo-header">
+          <a class="logo-cv" href="index.html">
+              <img class="logo-cv" src="/imagens/logo-cv.png" alt="Logo da Gamebooster">
+          </a>
+      </div>
+
+      <!-- ========== MENU DESKTOP (VERSÃO DO PROJETO FINAL) ========== -->
+      <nav class="nav-comp">
+          <ul class="itens-nav">
+              <li class="container-servicos">
+                  <span class="servicos">Serviços</span>
+                  <ul class="caixa-servicos">
+                      <li><a th:href="@{/anunciar}" class="servico borda-f">Anunciar</a></li>
+                      <li><a th:href="@{/contas_lista}" class="servico borda-f">Contas</a></li>
+                      <li><a th:href="@{/anunciar}" class="servico borda-f">Coisas</a></li>
+                      <li><a th:href="@{/precos}" class="servico men">Preços</a></li>
+                  </ul>
+              </li>
+              <li class="brilinho"><a th:href="@{/contato}">Contato</a></li>
+              <li class="brilinho"><a th:href="@{/avaliacoes}">Avaliações</a></li>
+              <li class="brilinho"><a th:href="@{/faq}">FAQ</a></li>
+              <button id="theme-button">Mudar tema</button>
+              <li>
+                  <button id="botao-login">
+                      <img class="passar-c" src="/imagens/avatar-brilho.svg" alt="Icone de login com brilho.">
+                      <img class="mostrada" src="/imagens/avatar.svg" alt="Icone de login.">
+                      <span>Login</span>
+                  </button>
+              </li>
+          </ul>
+      </nav>
+      <!-- ============================================================= -->
+
+      <!-- ========== MENU RESPONSIVO (VERSÃO DO PROJETO FINAL) ========== -->
+
+      <nav class="nav-cel">
+          <div class="menu-ham">
+
+              <input id="caixa-invisivel" type="checkbox">
+
+              <div class="fatias">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+
+              <ul class="menu">
+                  <li class="menu-ham-tipog">
+                      <a href="index.html"><img src="/imagens/tipografia.png"
+                              alt="GameBooster escrito de forma estilizada."></a>
+
+                      <div class="menu-x">
+                          <input id="caixa-invisivel-2" type="checkbox">
+
+                          <div class="x-ham">
+                              <span class="x1"></span>
+                              <span class="x2"></span>
+                          </div>
+                      </div>
+                  </li>
+                  <input id="invisivel-servicos" type="checkbox">
+                  <li class="container-servicos-2">
+                      <span class="servicos-ham">Serviços -></span>
+                      <ul class="caixa-servicos-2">
+                          <li class="servicosabcd" id="servico-a"><a th:href="@{/anunciar}">PokeXGames</a></li>
+                          <li class="servicosabcd" id="servico-b"><a th:href="@{/contas_lista}">League of Legends</a></li>
+                          <li class="servicosabcd" id="servico-c"><a th:href="@{/anunciar}">Contas</a></li>
+                          <!-- <li class="servicosabcd" id="servico-d"><a th:href="@{/anunciar}">Contas</a></li> -->
+                      </ul>
+                  </li>
+                  <li class="margem"></li>
+                  <li class="margem2"></li>
+                  <!-- <li class="brilinho"><a href="#">Intermédios</a></li> -->
+                  <li><a th:href="@{/precos}">Preços</a></li>
+                  <li><a th:href="@{/contato}">Contato</a></li>
+                  <li><a th:href="@{/avaliacoes}">Avaliações</a></li>
+                  <li><a th:href="@{/faq}">FAQ</a></li>
+                  <li><button id="theme-button">Mudar tema</button></li>
+                  <li class="menu-ham-log">
+                      <button id="botao-login-ham">LOGIN</button>
+                  </li>
+                  <li></li> <!-- Não apague isso -->
+              </ul>
+          </div>
+      </nav>
+
+      <!-- ============================================================= -->
+
+  </div>
+</header>
+
+  <main class="conta-teste">
+    <section class="container">
+      <div class="parte-esq">
+          <h1 class="pxg-conta-titulo">CONTAS (POKEXGAMES)</h1>  
+
+          <p class="pxg-conta-texto">Nesta seção você pode anunciar e comprar contas de PxG, de forma rápida e segura. Todas as vendas são intermediadas por alguém da nossa equipe. Para mais informações sobre as contas, entre em contato conosco</p>
+
+      </div>
+
+      <div class="imagem-pxg">
+          <img class="img-pxg" src="/imagens/master_trainer.webp" alt="Ilustração do jogo PxG.">
+      </div>
+    </section>
+
+    <section class="form-section">
+      <div class="form-header">ANÚNCIO DE CONTA</div>
+
+      <form id="form-dados" action="#" th:action="@{/anunciar}" method="post" th:object="${conta}">
+
+        <div class="form-set">
+          <label class="filter-tag" for="valor">Valor *</label>
+          <input class="text-input" type="number" name="valor" id="valor" maxlength="5" th:field="*{valor}" required>
+        </div>
+
+        <div class="form-set">
+          <label class="filter-tag" for="level">Nivel *</label>
+          <input class="text-input" type="number" name="nivel" id="level" th:field="*{nivel}" required>
+        </div>
+
+        <!-- <div class="form-set">
+          <label class="filter-tag" for="cla">Clã *</label>
+          <input class="text-input" type="text" name="cla" id="cla" maxlength="20" th:field="*{cla}">
+        </div>
+
+        <div class="form-set">
+          <label class="filter-tag" for="genero">Genero *</label>
+          <input class="text-input" type="text" name="genero" id="genero" maxlength="9" th:field="*{genero}">
+        </div> -->
+
+        <!-- <div class="form-set">
+          <label class="filter-tag" for="clan-select">Clã *</label>
+          <select class="select-input" name="clan" id="clan-select" th:field="*{cla}" required>
+            <option value="" selected disabled>Selecione</option>
+            <option value="Gardestrike">Gardestrike</option>
+            <option value="Ironhard">Ironhard</option>
+            <option value="Malefic">Malefic</option>
+            <option value="Naturia">Naturia</option>
+            <option value="Orebound">Orebound</option>
+            <option value="Psycraft">Psycraft</option>
+            <option value="Raibolt">Raibolt</option>
+            <option value="Seavell">Seavell</option>
+            <option value="Volcanic">Volcanic</option>
+            <option value="Wingeon">Wingeon</option>
+          </select>
+        </div>
+
+        <div class="form-set">
+          <label class="filter-tag" for="gender-select">Gênero *</label>
+          <select class="select-input" name="sexo" id="gender-select" th:field="*{genero}" required>
+            <option value="" selected disabled>Selecione</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+          </select>
+        </div> -->
+
+        <!-- <div class="form-set">
+          <label class="filter-tag" for="prof-select">Profissão *</label>
+          <select class="select-input" name="prof" id="prof-select" th:field="*{proficao}" required>
+            <option value="" selected disabled>Selecione</option>
+            <option value="Aventureiro">Aventureiro</option>
+            <option value="Engenheiro">Engenheiro</option>
+            <option value="Estilista">Estilista</option>
+            <option value="Professor">Professor</option>
+          </select>
+        </div> -->
+
+        <div class="form-set">
+          <label class="filter-tag" for="adicional1">Adicional 1</label>
+          <input class="text-input" type="text" name="adicional" id="adicional1" maxlength="40" th:field="*{add1}">
+        </div>
+
+        <div class="form-set">
+          <label class="filter-tag" for="adicional2">Adicional 2</label>
+          <input class="text-input" type="text" name="adicional" id="adicional2" maxlength="40" th:field="*{add2}">
+        </div>
+
+
+        <!-- <div class="form-set">
+          <label class="filter-tag" for="adicional1">Nome: </label>
+          <input class="text-input" type="text" name="adicional" id="adicional1" maxlength="40" th:field="*{nome}">
+        </div>
+
+        <div class="form-set">
+          <label class="filter-tag" for="adicional2">CPF: </label>
+          <input class="text-input" type="text" name="adicional" id="adicional2" maxlength="40" th:field="*{cpf}">
+        </div> -->
+
+
+        <!-- <label class="filter-tag" for="nome">Nome:</label>
+        <input type="text" id="nome" th:field="*{nome}"><br>
+
+        <label class="filter-tag" for="cpf">CPF:</label>
+        <input type="text" id="cpf" th:field="*{cpf}"> -->
+
+        <input class="anunciar" type="submit" value="Anunciar">
+
+        <!--<div class="form-set">
+          <label class="filter-tag" for="adicional3">Adicional 3</label>
+          <input class="text-input" type="text" name="adicional" id="adicional3" th:field="*{add3}">
+        </div>
+
+        <div class="form-set">
+          <label class="filter-tag" for="adicional4">Adicional 4</label>
+          <input class="text-input" type="text" name="adicional" id="adicional4" th:field="*{add4}">
+        </div> -->
+
+        <!-- <input class="anunciar" value="Anunciar Conta" type="submit"> -->
+        <!-- <button class="anunciar" type="submit" value="Anunciar Conta">Anunciar Conta</button> -->
+      </form>
+
+    </section>
+
+    <span class="divisoria"></span>
+
+   
+    <!-- <div class="conta-container" th:each="conta : ${lista}">
+      <section class="campo-info">
+        <span class="info-conta">Clã: <p class="info-char" th:text="${conta.cla}"></p> | </span>
+        <span class="info-conta">Nivel: <p class="info-char" th:text="${conta.nivel}"></p> | </span>
+        <span class="info-conta">Profissão: <p class="info-char" th:text="${conta.profissao}"></p> | </span>
+        
+        <span class="info-conta">Level de Profissão: <p class="info-char" th:text="${conta.cla}"></p> | </span>
+        
+        <span class="info-conta">Server: <p class="info-char" th:text="${conta.servidor}"></p> | </span>
+        <span class="info-conta" th:text="${conta.genero}"></span>
+        
+      </section>
+      <div class="outfit-container"><img src="/imagens/outfits/Seavell_Male.png" alt="Outfit Seavell Male"></div>
+      <div class="itemSet-container">
+        <div class="item-container"><img src="/imagens/itens/Hightechchip.png" alt="" class="item-pxg"></div>
+        <div class="item-container"><img src="/imagens/itens/Lorelei_Artefact.png" alt="" class="item-pxg"></div>
+        <div class="item-container"><img src="/imagens/itens/Giant_Electric_Fang.png" alt="" class="item-pxg"></div>
+        <div class="item-container"><img src="/imagens/itens/Iron_Mask.png" alt="" class="item-pxg"></div>
+      </div>
+      <div class="infos-adicionais">
+        <ul class="lista-info">
+          <li>Mewtwo Quest (Running Shoes)</li>
+          <li>Shiny Blastoise</li>
+          <li>Especialização (Hacker)</li>
+          <li>Sarkies Quest</li>
+        </ul>
+      </div>
+      <section class="campo-preco">
+        <p>valor</p>
+        <p><span class="preco-item">R$ </span><span class="centavos" th:text="${conta.valor}"></span></p>
+        <button class="botao-comprar">Comprar</button>
+      </section>
+    </div> -->
+  </main>
+
+  <footer>
+
+    <div class="footer-area">
+        <div class="caixa-footer">
+            <div class="declaracao">
+                <img class="tipografia-pb" src="/imagens/tipografia-PeB.png" alt="GameBooster escrito de forma estilizada.">
+                <p>A GameBooster© declara que não possui vínculo algum com as empresas responsáveis pelos jogos citados nesta página.</p>
+            </div>
+
+            <nav class="opcoes-footer">
+
+                <ul class="coluna-footer">
+                    <li>LEGAL</li>
+                    <li><a class="brilinho" href="#">Termos de Uso</a></li>
+                    <li><a class="brilinho" href="#">Política de Privacidade</a></li>
+                </ul>
+
+                <ul class="coluna-footer">
+                    <li>SUPORTE</li>
+                    <li><a class="brilinho" href="#">WhatsApp</a></li>
+                    <li><a class="brilinho" href="#">Chat Online</a></li>
+                    <li><a class="brilinho" href="#">E-mail</a></li>
+                </ul>
+                
+                <ul class="coluna-footer">
+                    <li>JOGOS</li>
+                    <li><a class="brilinho" href="#">PokeXGames - PxG</a></li>
+                    <li><a class="brilinho" th:href="@{/contas_lista}">League of Legends</a></li>
+                    <li><a class="brilinho" href="#">Tibia</a></li>
+                </ul>
+
+            </nav>
+        </div>
+
+        <div class="footer-final">
+            <p>© 2023 GameBooster Inc. Todos os direitos reservados.</p>
+            <div class="flex-logos-footer">
+                <a href="#"><img class="logos-footer" src="/imagens/facebook-logo-b.png" alt="Logo do Facebook."></a>
+                <a href="#"><img class="logos-footer" src="/imagens/instagram-logo-b.png" alt="Logo do Instagram."></a>
+                <a href="#"><img class="logos-footer" src="/imagens/discord-logo-b.png" alt="Logo do Discord."></a>
+            </div>
+        </div>
+    </div>
+  </footer>
+  <script src="/script/login.js" type="module"></script>
+</body>

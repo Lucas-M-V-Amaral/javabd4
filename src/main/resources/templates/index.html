@@ -91,9 +91,9 @@
                     <li class="container-servicos">
                         <span class="servicos">Serviços</span>
                         <ul class="caixa-servicos">
-                            <li><a th:href="@{/contas}" class="servico borda-f">PokeXGames</a></li>
-                            <li><a th:href="@{/lol}" class="servico borda-f">League of Legends</a></li>
-                            <li><a th:href="@{/contas}" class="servico borda-f">Contas</a></li>
+                            <li><a th:href="@{/anunciar}" class="servico borda-f">Anunciar</a></li>
+                            <li><a th:href="@{/contas_lista}" class="servico borda-f">Contas</a></li>
+                            <li><a th:href="@{/anunciar}" class="servico borda-f">Coisas</a></li>
                             <li><a th:href="@{/precos}" class="servico men">Preços</a></li>
                         </ul>
                     </li>
@@ -144,7 +144,7 @@
                             <span class="servicos-ham">Serviços -></span>
                             <ul class="caixa-servicos-2">
                                 <li class="servicosabcd" id="servico-a"><a th:href="@{/contas}">PokeXGames</a></li>
-                                <li class="servicosabcd" id="servico-b"><a th:href="@{/lol}">League of Legends</a></li>
+                                <li class="servicosabcd" id="servico-b"><a th:href="@{/contas_lista}">League of Legends</a></li>
                                 <li class="servicosabcd" id="servico-c"><a th:href="@{/contas}">Contas</a></li>
                                 <!-- <li class="servicosabcd" id="servico-d"><a th:href="@{/contas}">Contas</a></li> -->
                             </ul>
@@ -231,7 +231,7 @@
 
                     <p>Eloboosting, duoboosting e compra de contas</p>
 
-                    <a class="botao-laranja conferir" th:href="@{/lol}">
+                    <a class="botao-laranja conferir" th:href="@{/contas_lista}">
                         <div>Conferir</div>
                     </a>
                 </div>
@@ -436,7 +436,7 @@
                     <ul class="coluna-footer">
                         <li>JOGOS</li>
                         <li><a class="brilinho" href="#">PokeXGames - PxG</a></li>
-                        <li><a class="brilinho" th:href="@{/lol}">League of Legends</a></li>
+                        <li><a class="brilinho" th:href="@{/contas_lista}">League of Legends</a></li>
                         <li><a class="brilinho" href="#">Tibia</a></li>
                     </ul>
 
